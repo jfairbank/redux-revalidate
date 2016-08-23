@@ -1,0 +1,96 @@
+{
+  "name": "redux-revalidate",
+  "version": "0.1.0",
+  "description": "Validate your Redux store state with revalidate",
+  "main": "lib/index.js",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "clean": "rimraf lib",
+    "lint": "eslint src test",
+    "prepublish": "npm run clean && npm run build",
+    "test": "ava",
+    "watch:test": "ava -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfairbank/redux-revalidate.git"
+  },
+  "keywords": [
+    "validate",
+    "revalidate",
+    "redux",
+    "form",
+    "validation"
+  ],
+  "author": "Jeremy Fairbank <elpapapollo@gmail.com> (http://jeremyfairbank.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jfairbank/redux-revalidate/issues"
+  },
+  "homepage": "https://github.com/jfairbank/redux-revalidate#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-transform-export-extensions": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015-loose": "^7.0.0",
+    "babel-register": "^6.11.6",
+    "eslint": "^3.3.1",
+    "eslint-config-airbnb-base": "^5.0.2",
+    "eslint-import-resolver-node": "^0.2.3",
+    "eslint-plugin-import": "^1.13.0",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
+    "revalidate": "^0.4.0",
+    "rimraf": "^2.5.4"
+  },
+  "dependencies": {
+    "lodash.omit": "^4.5.0",
+    "object-assign": "^4.1.0"
+  },
+  "peerDependencies": {
+    "revalidate": "<1.0.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015-loose"
+    ],
+    "plugins": [
+      "transform-export-extensions",
+      "transform-object-rest-spread"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "airbnb-base",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "settings": {
+      "import/resolver": "node"
+    },
+    "rules": {
+      "quote-props": [
+        "error",
+        "consistent-as-needed"
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ]
+    }
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": "babel-register"
+  }
+}
