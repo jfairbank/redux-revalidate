@@ -44,7 +44,7 @@
     "eslint": "^3.3.1",
     "eslint-config-airbnb-base": "^7.0.0",
     "eslint-import-resolver-node": "^0.2.3",
-    "eslint-plugin-import": "^1.13.0",
+    "eslint-plugin-import": "^1.16.0",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
     "revalidate": "^0.4.0",
