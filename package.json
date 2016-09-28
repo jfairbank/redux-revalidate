@@ -34,7 +34,7 @@
   "homepage": "https://github.com/jfairbank/redux-revalidate#readme",
   "devDependencies": {
     "ava": "^0.16.0",
-    "babel-cli": "^6.11.4",
+    "babel-cli": "^6.16.0",
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
     "babel-plugin-transform-export-extensions": "^6.8.0",
